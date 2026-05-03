@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg-primary text-text-primary font-sans;
+  }
+  ::selection {
+    @apply bg-accent/30 text-accent-light;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-dark text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300;
+  }
+  .btn-outline {
+    @apply border border-accent text-accent hover:bg-accent hover:text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300;
+  }
+  .section-heading {
+    @apply text-4xl md:text-5xl font-heading font-bold text-text-primary;
+  }
+  .section-subheading {
+    @apply text-text-muted text-lg mt-4 max-w-xl;
+  }
+  .card {
+    @apply bg-bg-surface border border-border-color rounded-xl2 p-6 shadow-card hover:shadow-card-hover transition-all duration-300;
+  }
+}
